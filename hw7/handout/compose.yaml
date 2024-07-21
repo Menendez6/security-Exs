@@ -1,0 +1,9 @@
+services:
+  stacksmashing:
+    image: com402/hw07:latest
+    volumes:
+      - ./sploits:/home/user/sploits:rw
+      - ./targets:/home/user/targets:rw
+      - ./fuzzing:/home/user/fuzzing:rw
+    security_opt:
+      - seccomp=unconfined
